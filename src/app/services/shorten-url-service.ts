@@ -5,11 +5,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ShortenUrlServiceService {
+export class ShortenUrlService {
 
   constructor(private http: HttpClient) {}
 
   shortenUrl(url:any): Observable<any>{
-    return this.http.post("http://localhost:8080/generate", url);
+    return this.http.post("http://localhost:8080/generate", url, {responseType: "text"});
   }
 }

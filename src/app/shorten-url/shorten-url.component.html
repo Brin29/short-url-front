@@ -1,1 +1,7 @@
-<p>shorten-url works!</p>
+  <div>
+    <label for="url">Enter URL:</label>
+    <input id="url" [formControl]="formShorten" type="url">
+    <button (click)="shortenUrl()" type="button">
+      Shorten URL
+    </button>
+</div>
