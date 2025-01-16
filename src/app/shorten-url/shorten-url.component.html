@@ -1,7 +1,7 @@
   <div>
     <label for="url">Enter URL:</label>
-    <input id="url" [formControl]="formShorten" type="url">
-    <button (click)="shortenUrl()" type="button">
+    <input id="url" #longUrl [formControl]="formShorten" type="url">
+    <button (click)="shortenUrl(longUrl.value)" type="button">
       Shorten URL
     </button>
 </div>

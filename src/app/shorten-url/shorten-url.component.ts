@@ -14,15 +14,13 @@ export class ShortenUrlComponent {
 
   formShorten = new FormControl("", Validators.required);
 
-  url = [];
-
-  shortenUrl(){
-    this.shortenService.shortenUrl({
-      longUrl: "https://github.com/Brin29/auth-register-login-front/blob/main/src/app/app.config.ts"
-    }).subscribe({
+  shortUrl = [];
+  
+  shortenUrl(url:any){
+    this.shortenService.shortenUrl({longUrl: "https://youtube.com"}).subscribe({
       next: (data) => {
-        this.url = data;
-        console.log(this.url);
+        this.shortUrl = data;
+        console.log(this.shortUrl);
       },
       error: (err) => {
         console.log(err);
